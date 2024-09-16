@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jointjs/3.7.5/joint.css" />
+    <style>
+      body {
+        display: grid;
+        gap: 2%;
+        grid-template-columns: 1fr 8fr;
+        grid-template-areas:
+          "sidebar myholder";
+      }
+
+      #sidebar {
+        grid-area: sidebar;
+      }
+
+      #sidebar > * {
+        width: 100%;
+      }
+
+      #myholder {
+        grid-area: myholder;
+      }
+    </style>
+</head>
+<body>
+    <!-- content -->
+    <div id="sidebar">
+      <button id="create-entity-button">create entity</button>
+      <button id="create-relationship-button">create relationship</button>
+      <button id="create-attribute-button">create attribute</button>
+      <button id="create-weak-entity-button">create weak entity</button>
+      <form id="form">
+        <input id="change-name-input"/>
+      </form>
+    </div>
+    <div id="myholder"></div>
+
+    <!-- dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.4.1/backbone.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jointjs/3.7.5/joint.js"></script>
+
+    <!-- code -->
+    <script type="text/javascript" src="er_mvp.js"></script>
+</body>
+</html>
